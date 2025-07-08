@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+.cards-container {
+  /* Centers the whole strip of cards */
+  max-width: 900px;       /* keeps content from getting too wide on big screens */
+  margin: 0 auto;         /* horizontal centering */
+  padding: 1rem;
+}
+
+/* Each individual card */
+.card {
+  border: 1px solid #ddd; /* thin light-grey outline  */
+  border-radius: 8px;     /* subtle rounded corners  */
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;  /* space between cards     */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* faint depth */
+  background: #fff;
+  max-width: 400px;       /* makes each card smaller */
+  margin-left: auto;      /* centering trick: set both */
+  margin-right: auto;     /* margins to auto          */
+}
+
+/* Optional: nicer list styling for the tech stack */
+.card ul {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 1rem;
+}

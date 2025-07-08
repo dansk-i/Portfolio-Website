@@ -37,38 +37,40 @@ export default function App() {
   }, []);
 
   // 3) Render logic
-  if (loading) return <p>Loading…</p>;
+ if (loading) return <p>Loading…</p>;
   if (error)   return <p style={{ color: 'red' }}>{error}</p>;
 
   return (
     <div className="App">
       <h1>My Portfolio Projects</h1>
 
-      {projects.map(p => (
-        <div key={p.id} className="card">
-          <h2>{p.title}</h2>
-          <p>{p.description}</p>
+      <div className="cards-container">
+        {projects.map(p => (
+          <article key={p.id} className="card">
+            <h2>{p.title}</h2>
+            <p>{p.description}</p>
 
-          <strong>Tech:</strong>
-          <ul>
-            {p.tech.map(t => (
-              <li key={t}>{t}</li>
-            ))}
-          </ul>
+            <strong>Tech stack:</strong>
+            <ul>
+              {p.tech.map(t => (
+                <li key={t}>{t}</li>
+              ))}
+            </ul>
 
-          <a href={p.github} target="_blank" rel="noopener noreferrer">
-            GitHub
-          </a>
-          {p.demo && (
-            <>
-              {' · '}
-              <a href={p.demo} target="_blank" rel="noopener noreferrer">
-                Live Demo
-              </a>
-            </>
-          )}
-        </div>
-      ))}
+            <a href={p.github} target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+            {p.demo && (
+              <>
+                {' · '}
+                <a href={p.demo} target="_blank" rel="noopener noreferrer">
+                  Live Demo
+                </a>
+              </>
+            )}
+          </article>
+        ))}
+      </div>
     </div>
   );
 }
