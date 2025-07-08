@@ -6,8 +6,7 @@ const app = express();
 const PORT = 3001;
 app.use(cors());
 
-// Mount router: any request starting with /api/projects
-// is handed off to routes/projects.ts
+// Mount router: any request starting with /api/projects is handed off to routes/projects.ts
 app.use('/api/project', projectRouter);
 
 app.get('/api/message', (_req, res) => {
