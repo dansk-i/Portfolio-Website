@@ -4,7 +4,7 @@ import './Home.css'; // optional future styling
 export default function Home() {
   return (
     <div className="home">
-      <h1>Daniel Sobalski</h1>
+      <h1 className="text-4xl font-bold text-blue-500">Daniel Sobalski</h1>
       <p>
         Recent Computer Science graduate, aspiring graphics
         & full-stack developer.
