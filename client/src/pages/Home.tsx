@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import './Home.css'; // optional future styling
-import './grid-background.css';
 
 export default function Home() {
   
@@ -11,7 +10,7 @@ export default function Home() {
 
   return (
 
-    <div className="bg-neutral-900 min-h-screen flex flex-col items-center justify-center">
+    <div className="min-h-screen flex flex-col items-center justify-center">
       <main className="text-white m-auto grid grid-cols-4 gap-5 max-w-6xl overflow-hidden relative w-full h-full p-6 h-screen max-h-[800px] border-2">
             
             <div className="bg-neutral-800 border border-zinc-600 col-span-4 row-span-2 align-start flex-none justify-start p-6 rounded-lg hover:border-red-500 hover:border-2 transition duration-200"> 

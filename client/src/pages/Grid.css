@@ -1,0 +1,15 @@
+.grid-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 80px 80px;
+
+  /* Fade out grid lines toward center — bottom half will be invisible */
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
+}
