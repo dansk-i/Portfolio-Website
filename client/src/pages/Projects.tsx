@@ -34,23 +34,28 @@ export default function Projects() {
   if (error)   return <p style={{ color: 'red' }}>{error}</p>;
 
   return (
-    <>
+    
+    <div>
       <BackButton />
+      <div className='text-white flex flex-col items-center justify-center gap-6 p-6 overflow-hidden w-full h-full'>
+    
 
-      <h1 style={{ textAlign: 'center' }}>Projects</h1>
+              <h1>Projects</h1>
 
-      <div className="cards-container">
-        {projects.map(p => (
-          <article key={p.id} className="card">
-            <h2>{p.title}</h2>
-            <p>{p.description}</p>
-            <strong>Tech:</strong>
-            <ul>{p.tech.map(t => <li key={t}>{t}</li>)}</ul>
-            <a href={p.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-            {p.demo && <> · <a href={p.demo} target="_blank" rel="noopener noreferrer">Live</a></>}
-          </article>
-        ))}
+              <div className='flex-none w-full max-w-4xl grid grid-cols-2 gap-6'>
+                {projects.map(p => (
+                  <article key={p.id} className="bg-neutral-800 border border-zinc-600 p-6 rounded-lg hover:border-red-500 hover:border-2 transition duration-200">
+                    <h2>{p.title}</h2>
+                    <p>{p.description}</p>
+                    <strong>Tech:</strong>
+                    <ul>{p.tech.map(t => <li key={t}>{t}</li>)}</ul>
+                    <a href={p.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+                    {p.demo && <> · <a href={p.demo} target="_blank" rel="noopener noreferrer">Live</a></>}
+                  </article>
+                ))}
+              </div>
+   
       </div>
-    </>
+    </div>
   );
 }
