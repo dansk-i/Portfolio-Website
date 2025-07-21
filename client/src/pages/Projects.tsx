@@ -17,6 +17,10 @@ export default function Projects() {
   const [error, setError]       = useState<string | null>(null);
 
   useEffect(() => {
+    document.title = "Projects - Daniel Sobalski";
+  }, []);
+  
+  useEffect(() => {
     fetch('/api/project')
       .then(res => {
         if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);

@@ -1,0 +1,15 @@
+.fading-grid::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image: 
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 80px 80px;
+
+  -webkit-mask-image: linear-gradient(to right, transparent 40%, white);
+  mask-image: linear-gradient(to right, transparent 40%, white);
+}
