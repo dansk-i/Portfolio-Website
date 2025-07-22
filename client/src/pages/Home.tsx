@@ -11,9 +11,9 @@ export default function Home() {
   return (
 
     <div className="flex flex-col items-center justify-center">
-      <main className="text-white m-auto grid grid-cols-4 gap-5 max-w-6xl overflow-hidden w-full h-full p-6 h-screen max-h-[800px]">
+      <main className="text-white m-auto grid grid-cols-4 grid-rows-8 gap-5 max-w-6xl overflow-hidden w-full h-full p-6 h-screen max-h-[800px]">
             
-            <div className="bg-neutral-800 border border-zinc-600 col-span-3 row-span-2 align-start flex-none justify-start p-6 rounded-lg hover:border-red-500 hover:border-2 transition duration-200"> 
+            <div className="bg-neutral-800 border border-zinc-600 col-span-3 row-span-4 align-start flex-none justify-start p-6 rounded-lg hover:border-red-500 hover:border-2 transition duration-200"> 
               <div className="">
                   
                   <div className=''>
@@ -26,30 +26,50 @@ export default function Home() {
               </div>
             </div>
        
-        {/* Navigation “cards” */}
+        {/* About Me */}
+        <section className="bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-7 p-6 rounded-lg hover:border-red-500 hover:border-2 transition duration-200">
+          <Link to="/projects" className="nav-card">
+            <h2>Projects</h2>
+            <p>See my portfolio projects</p>
+          </Link>
+          <Link to="/about" className="nav-card">
+            <h2>About Me</h2>
+            <p>Background, skills, interests</p>
+          </Link>
+        </section>
+        
+       
+
+         {/* Email And Socials */}
         <section className="bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-4 p-6 rounded-lg hover:border-red-500 hover:border-2 transition duration-200">
-          <Link to="/projects" className="nav-card">
-            <h2>Projects</h2>
-            <p>See my portfolio projects</p>
-          </Link>
-          <Link to="/about" className="nav-card">
-            <h2>About Me</h2>
-            <p>Background, skills, interests</p>
-          </Link>
+           <h2>Contact Me!</h2>
         </section>
 
-
-         {/* Navigation “cards” */}
-        <section className="bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-2 p-6 rounded-lg hover:border-red-500 hover:border-2 transition duration-200">
-          <Link to="/projects" className="nav-card">
-            <h2>Projects</h2>
-            <p>See my portfolio projects</p>
-          </Link>
-          <Link to="/about" className="nav-card">
-            <h2>About Me</h2>
-            <p>Background, skills, interests</p>
-          </Link>
+         {/* Clock */}
+        <section className="bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-1 p-6 rounded-lg hover:border-red-500 hover:border-2 transition duration-200">
+           <h2>Time Temp</h2>
         </section>
+
+         {/* Projects */}
+        <section className="bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-3 p-6 rounded-lg hover:border-red-500 hover:border-2 transition duration-200">
+           <h2>Projects</h2>
+        </section>
+
+         {/* Now Status */}
+        <section className="bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-3 p-6 rounded-lg hover:border-red-500 hover:border-2 transition duration-200">
+           <h2>Now?</h2>
+        </section>
+
+          {/* Colors */}
+        <section className="bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-1 p-6 rounded-lg hover:border-red-500 hover:border-2 transition duration-200">
+           <h2>Colors</h2>
+        </section>
+
+          {/* Trademark */}
+        <section className="bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-1 p-6 rounded-lg hover:border-red-500 hover:border-2 transition duration-200">
+           <h2>Trademark</h2>
+        </section>
+
 
 
       </main>
