@@ -30,26 +30,27 @@ export default function Home() {
                     {/* Logo Links */}
                   <div className='flex flex-row gap-4 justify-start place-items-center'>
 
-                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className='bg-neutral-950 w-fit px-5 py-3 border border-red-500 border-1 border-r-[3px] border-b-[3px] transition duration-200 rounded-bl-xl rounded-tl-lg rounded-br-lg rounded-tr-xl text-white hover:text-red-500'>
-                      <GithubLogo className="w-6 h-5"/>
-                    </a>
+                    <div className='w-20'>
+                      <button onClick={() => window.open("https://github.com/dansk-i", "_blank")}
+                            className="bg-neutral-950 w-fit px-5 py-3 border border-red-500 border-1 border-r-[3px] border-b-[3px] transition duration-200 rounded-bl-xl rounded-tl-lg rounded-br-lg rounded-tr-xl text-white hover:text-red-500 active:border-r-[1px] active:border-b-[1px] active:text-red-500" >
+                            <GithubLogo className="w-6 h-5" />
+                      </button>
+                    </div>
 
-                     <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className='bg-neutral-950 w-fit px-5 py-3 border border-red-500 border-1 border-r-[3px] border-b-[3px] transition duration-200 rounded-bl-xl rounded-tl-lg rounded-br-lg rounded-tr-xl text-white hover:text-red-500'>
-                      <LinkedinLogo className="w-6 h-5"/>
-                    </a>
 
-                     <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className='bg-neutral-950 w-fit px-5 py-3 border border-red-500 border-1 border-r-[3px] border-b-[3px] transition duration-200 rounded-bl-xl rounded-tl-lg rounded-br-lg rounded-tr-xl text-white hover:text-red-500'>
-                      <QuestionLogo className="w-6 h-5"/>
-                    </a>
-
-                    <button
-                          onClick={() => window.open("https://github.com/", "_blank")}
-                          className="bg-neutral-950 w-fit px-5 py-3 border border-red-500 border-1 border-r-[3px] border-b-[3px] 
-                                    transition duration-200 rounded-bl-xl rounded-tl-lg rounded-br-lg rounded-tr-xl 
-                                    text-white hover:text-red-500 active:rounded-bl-lg active:rounded-tr-lg" >
-                          <GithubLogo className="w-6 h-5" />
-                    </button>
-
+                    <div className='w-20'>
+                     <button onClick={() => window.open("https://www.linkedin.com/in/danielsobalski/", "_blank")}
+                            className="bg-neutral-950 w-fit px-5 py-3 border border-red-500 border-1 border-r-[3px] border-b-[3px] transition duration-200 rounded-bl-xl rounded-tl-lg rounded-br-lg rounded-tr-xl text-white hover:text-red-500 active:border-r-[1px] active:border-b-[1px] active:text-red-500" >
+                            <LinkedinLogo className="w-6 h-5" />
+                      </button>
+                    </div>
+                    
+                    <div className='w-20'>
+                        <button className="bg-neutral-950 w-fit px-5 py-3 border border-red-500 border-1 border-r-[3px] border-b-[3px] transition duration-200 rounded-bl-xl rounded-tl-lg rounded-br-lg rounded-tr-xl text-white hover:text-red-500 active:border-r-[1px] active:border-b-[1px] active:text-red-500" >
+                            <QuestionLogo className="w-6 h-5" />
+                      </button>
+                    </div>
+                    
                   </div>
 
               </div>
