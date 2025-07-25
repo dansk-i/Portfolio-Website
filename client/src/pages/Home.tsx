@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import './Home.css';
 import profilePic from '../assets/testimage.png'; 
 import {ReactComponent as GithubLogo} from '../assets/github.svg';
+import {ReactComponent as LinkedinLogo} from '../assets/linkedin.svg';
+import {ReactComponent as QuestionLogo} from '../assets/question.svg';
 
 export default function Home() {
   
@@ -13,10 +15,10 @@ export default function Home() {
   return (
 
     <div className="flex flex-col items-center justify-center">
-      <main className="text-white m-auto grid grid-cols-4 grid-rows-8 gap-5 max-w-6xl overflow-hidden w-full h-full p-6 h-screen max-h-[800px]">
+      <main className="text-white m-auto grid grid-cols-4 grid-rows-8 gap-4 max-w-6xl overflow-hidden w-full h-full p-6 h-screen max-h-[800px]">
             
           {/* Main Header */}
-          <div className="flex w-full h-full bg-neutral-800 border border-zinc-600 col-span-3 row-span-4 align-start justify-start p-6 pb-10 rounded-lg hover:border-red-500 hover:border-1 transition duration-200"> 
+          <div className="flex w-full h-full bg-neutral-800 border border-zinc-600 col-span-3 row-span-4 align-start justify-start p-6 pb-10 rounded-lg overflow-hidden hover:border-red-500 hover:border-1 transition duration-200"> 
               <div className="flex flex-col justify-between">
                   <div className=''>
                       <h2 className="text-sm font-light m-0 text-zinc-500">welcome</h2>
@@ -28,17 +30,25 @@ export default function Home() {
                     {/* Logo Links */}
                   <div className='flex flex-row gap-4 justify-start place-items-center'>
 
-                    <div className='bg-neutral-950 w-fit px-5 py-3 border border-red-500 border-1 border-r-[3px] border-b-[3px] transition duration-200 rounded-lg text-white hover:text-red-500'>
-                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                             <GithubLogo className="w-5 h-4"/>
-                        </a>
-                    </div>
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className='bg-neutral-950 w-fit px-5 py-3 border border-red-500 border-1 border-r-[3px] border-b-[3px] transition duration-200 rounded-bl-xl rounded-tl-lg rounded-br-lg rounded-tr-xl text-white hover:text-red-500'>
+                      <GithubLogo className="w-6 h-5"/>
+                    </a>
 
-                    <div className='bg-neutral-950 w-fit px-5 py-3 border border-red-500 border-1 border-r-[3px] border-b-[3px] transition duration-200 rounded-lg text-white hover:text-red-500'>
-                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                             <GithubLogo className="w-5 h-4"/>
-                        </a>
-                    </div>
+                     <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className='bg-neutral-950 w-fit px-5 py-3 border border-red-500 border-1 border-r-[3px] border-b-[3px] transition duration-200 rounded-bl-xl rounded-tl-lg rounded-br-lg rounded-tr-xl text-white hover:text-red-500'>
+                      <LinkedinLogo className="w-6 h-5"/>
+                    </a>
+
+                     <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className='bg-neutral-950 w-fit px-5 py-3 border border-red-500 border-1 border-r-[3px] border-b-[3px] transition duration-200 rounded-bl-xl rounded-tl-lg rounded-br-lg rounded-tr-xl text-white hover:text-red-500'>
+                      <QuestionLogo className="w-6 h-5"/>
+                    </a>
+
+                    <button
+                          onClick={() => window.open("https://github.com/", "_blank")}
+                          className="bg-neutral-950 w-fit px-5 py-3 border border-red-500 border-1 border-r-[3px] border-b-[3px] 
+                                    transition duration-200 rounded-bl-xl rounded-tl-lg rounded-br-lg rounded-tr-xl 
+                                    text-white hover:text-red-500 active:rounded-bl-lg active:rounded-tr-lg" >
+                          <GithubLogo className="w-6 h-5" />
+                    </button>
 
                   </div>
 
