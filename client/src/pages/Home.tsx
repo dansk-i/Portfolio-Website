@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState} from 'react';
 import './Home.css';
 import profilePic from '../assets/testimage.png'; 
 import {ReactComponent as GithubLogo} from '../assets/github.svg';
@@ -7,6 +7,26 @@ import {ReactComponent as LinkedinLogo} from '../assets/linkedin.svg';
 import {ReactComponent as QuestionLogo} from '../assets/question.svg';
 
 export default function Home() {
+  
+  const [showFact, setShowFact] = useState(false);
+  const [factIndex, setFactIndex] = useState(0);
+
+  const facts = [
+    "I love shaders.",
+    "React is fun.",
+    "TypeScript saves lives.",
+    "Tailwind makes styling less painful.",
+    ];
+
+  const handleMouseDown = () => {
+    setFactIndex((prev) => (prev + 1) % facts.length);
+    setShowFact(true);
+  };
+
+  const handleMouseUp = () => {
+    setShowFact(false);
+  };
+
   
   useEffect(() => {
       document.title = "Home - Daniel Sobalski";
@@ -26,6 +46,12 @@ export default function Home() {
                   <div className='h-full'>
                       <h1>I'm <span className="font-bold">Daniel Sobalski</span>, a software developer with strong focus on graphics programming</h1>
                   </div>
+                  
+                  <div className='pb-4 flex justify-center'>
+        
+                        
+                  </div>
+
 
                     {/* Logo Links */}
                   <div className='flex flex-row gap-4 justify-start place-items-center'>
@@ -45,12 +71,26 @@ export default function Home() {
                       </button>
                     </div>
                     
-                    <div className='w-20'>
-                        <button className="bg-neutral-950 w-fit px-5 py-3 border border-red-500 border-1 border-r-[3px] border-b-[3px] transition duration-200 rounded-bl-xl rounded-tl-lg rounded-br-lg rounded-tr-xl text-white hover:text-red-500 active:border-r-[1px] active:border-b-[1px] active:text-red-500" >
-                            <QuestionLogo className="w-6 h-5" />
-                      </button>
-                    </div>
+     
+                        <div className='w-20 relative'>
+                             {/* Quip Box */}
+                              {showFact && (
+                          
+                                <div className='absolute bottom-16 -translate-x-[69px] w-[200px] max-w-[200px]'>
+                                    <div className="bg-neutral-950 px-5 py-3 border border-red-500 border-1 border-r-[3px] border-b-[3px] rounded-bl-xl rounded-tl-lg rounded-br-lg rounded-tr-xl text-white text-center
+                                    after:rotate-45 after:w-5 after:h-5 after:absolute after:bottom-[-8px] after:left-1/2 after:-translate-x-2 after:bg-neutral-950 after:border-r-[1px] after:border-b-[1px] after:border-red-500">
+                                      {facts[factIndex]}
+                                    </div>
+                                </div>
+                               )}
+
+
+                            <button  onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} className="bg-neutral-950 w-fit px-5 py-3 border border-red-500 border-1 border-r-[3px] border-b-[3px] transition duration-200 rounded-bl-xl rounded-tl-lg rounded-br-lg rounded-tr-xl text-white hover:text-red-500 active:border-r-[1px] active:border-b-[1px] active:text-red-500" >
+                                <QuestionLogo className="w-6 h-5" />
+                            </button>
+                        </div>
                     
+                  
                   </div>
 
               </div>
