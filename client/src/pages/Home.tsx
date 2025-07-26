@@ -35,7 +35,7 @@ export default function Home() {
   return (
 
     <div className="flex flex-col items-center justify-center">
-      <main className="text-white m-auto grid grid-cols-4 grid-rows-8 gap-4 max-w-6xl overflow-hidden w-full h-full p-6 h-screen max-h-[800px]">
+      <main className="text-white m-auto grid grid-cols-4 grid-rows-8 gap-4 max-w-6xl overflow-hidden w-full h-full p-6 h-screen max-h-[800px] font-sans-serif">
             
           {/* Main Header */}
           <div className="flex w-full h-full bg-neutral-800 border border-zinc-600 col-span-3 row-span-4 align-start justify-start p-6 pb-10 rounded-lg overflow-hidden hover:border-red-500 hover:border-1 transition duration-200"> 
@@ -43,8 +43,10 @@ export default function Home() {
                   <div className=''>
                       <h2 className="text-sm font-light m-0 text-zinc-500">welcome</h2>
                   </div>
-                  <div className='h-full'>
-                      <h1>I'm <span className="font-bold">Daniel Sobalski</span>, a software developer with strong focus on graphics programming</h1>
+                  <div className='h-full font-light'>
+                      <span>I'm <b className="font-bold">Daniel Sobalski</b>, a software developer with strong focus on graphics, optimization, and the user experience.</span> <br />
+
+                       <span className='block mt-2'>Feel free to reach out, or to check some the projects I've been working on below.</span>
                   </div>
                   
                   <div className='pb-4 flex justify-center'>
@@ -103,21 +105,39 @@ export default function Home() {
        
         {/* About Me */}
         <section className="bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-7 p-6 rounded-lg hover:border-red-500 hover:border-1 transition duration-200">
-          <Link to="/projects" className="nav-card">
-            <h2>Projects</h2>
-            <p>See my portfolio projects</p>
-          </Link>
-          <Link to="/about" className="nav-card">
-            <h2>About Me</h2>
-            <p>Background, skills, interests</p>
-          </Link>
+          <h2 className='text-lg font-bold pb-2'>About Me</h2>
+            <div className='flex flex-col gap-2 text-sm font-light'>
+              <p> Hi, I'm Daniel, a graphics programmer from Canada.</p> <br />
+              <p> My primary tools of choice includes:</p>
+              <ul className='list-disc list-inside pl-1'>
+                <li> <b>C/C++</b></li>
+                <li> <b>Java</b></li>
+                <li> <b>Python</b></li>
+                <li> <b>React</b></li>
+                <li> <b>Nodejs</b></li>
+                <li> <b>TypeScript</b></li>
+                <li> <b>TailwindCSS</b></li>
+                <li> <b>WebGPU</b></li>
+              </ul>
+              <br />
+              <p>Besides coding, I'm passionate about 3D modelling, animation, weightlifiting, and cinema.</p>
+            </div>
         </section>
         
        
 
          {/* Email And Socials */}
         <section className="bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-4 p-6 rounded-lg hover:border-red-500 hover:border-1 transition duration-200">
-           <h2>Contact Me!</h2>
+          <h2 className='text-lg font-bold pb-5'>Let's start working together!</h2>
+          <h2 className="italic text-zinc-500 pb-1">Contact Details</h2>
+          <p className='italic text-sm pb-5'>daniel.sobalski2036@gmail.com <br />Canada</p>
+        
+          <h2 className="italic text-zinc-500 pb-1">Socials</h2>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/danielsobalski/">Linkedin</a></li>
+            <li><a href="https://github.com/dansk-i">Github</a></li>
+          </ul>
+          
         </section>
 
          {/* Clock */}
@@ -128,6 +148,13 @@ export default function Home() {
          {/* Projects */}
         <section className="bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-3 p-6 rounded-lg hover:border-red-500 hover:border-1 transition duration-200">
            <h2>Projects</h2>
+           <Link to="/projects" className="nav-card">
+            <p>See my portfolio projects</p>
+          </Link>
+          <Link to="/about" className="nav-card">
+            <h2>About Me</h2>
+            <p>Background, skills, interests</p>
+          </Link>
         </section>
 
          {/* Now Status */}
