@@ -5,6 +5,7 @@ import profilePic from '../assets/testimage.png';
 import {ReactComponent as GithubLogo} from '../assets/github.svg';
 import {ReactComponent as LinkedinLogo} from '../assets/linkedin.svg';
 import {ReactComponent as QuestionLogo} from '../assets/question.svg';
+import Clock from '../components/Clock';
 
 export default function Home() {
   
@@ -141,8 +142,8 @@ export default function Home() {
         </section>
 
          {/* Clock */}
-        <section className="bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-1 p-6 rounded-lg hover:border-red-500 hover:border-1 transition duration-200">
-           <h2>Time Temp</h2>
+        <section className="bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-1 p-6 rounded-lg hover:border-red-500 hover:border-1 transition duration-200">
+           <Clock />
         </section>
 
          {/* Projects */}
