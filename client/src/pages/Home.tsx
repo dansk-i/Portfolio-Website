@@ -5,7 +5,11 @@ import profilePic from '../assets/testimage.png';
 import {ReactComponent as GithubLogo} from '../assets/github.svg';
 import {ReactComponent as LinkedinLogo} from '../assets/linkedin.svg';
 import {ReactComponent as QuestionLogo} from '../assets/question.svg';
+import {ReactComponent as ProjectIcon } from '../assets/projects2.svg';
 import Clock from '../components/Clock';
+import dotsAni from '../assets/dots.gif';
+import codingAni from '../assets/coding.gif';
+
 
 export default function Home() {
   
@@ -36,7 +40,7 @@ export default function Home() {
   return (
 
     <div className="flex flex-col items-center justify-center">
-      <main className="text-white m-auto grid grid-cols-4 grid-rows-8 gap-4 max-w-6xl overflow-hidden w-full h-full p-6 h-screen max-h-[800px] font-sans-serif">
+      <main className="text-white m-auto grid grid-cols-4 grid-rows-8 gap-4 max-w-6xl overflow-hidden w-full h-full p-6 h-screen max-h-[800px] font-mono">
             
           {/* Main Header */}
           <div className="flex w-full h-full bg-neutral-800 border border-zinc-600 col-span-3 row-span-4 align-start justify-start p-6 pb-10 rounded-lg overflow-hidden hover:border-red-500 hover:border-1 transition duration-200"> 
@@ -142,29 +146,55 @@ export default function Home() {
         </section>
 
          {/* Clock */}
-        <section className="bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-1 p-6 rounded-lg hover:border-red-500 hover:border-1 transition duration-200">
+        <section className="bg-neutral-800 overflow-hidden border border-zinc-600 align-center flex-none h-full justify-center relative col-span-1 row-span-1 p-6 rounded-lg hover:border-red-500 hover:border-1 transition duration-200 focus:outline-none focus:ring-2 focus:ring-red-500/40">
+           <span className="absolute top-4 right-4 flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-50"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600 opacity-75"></span>
+            </span>
+
            <Clock />
         </section>
 
          {/* Projects */}
-        <section className="bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-3 p-6 rounded-lg hover:border-red-500 hover:border-1 transition duration-200">
-           <h2>Projects</h2>
-           <Link to="/projects" className="nav-card">
-            <p>See my portfolio projects</p>
-          </Link>
-          <Link to="/about" className="nav-card">
-            <h2>About Me</h2>
-            <p>Background, skills, interests</p>
-          </Link>
-        </section>
+         <Link to="/projects" draggable={false} className="group overflow-hidden relative bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start col-span-1 row-span-2 p-2 rounded-lg hover:border-red-500 hover:border-1 transition duration-200">
+          <img src={codingAni} alt="" className="scale-[2] absolute inset-0 opacity-0 rounded-lg transition-opacity duration-150 group-hover:opacity-20 pointer-events-none" draggable={false} />
+            <span className="pointer-events-none absolute right-5 top-5">
+              <svg
+                className="h-5 w-5 text-zinc-400 transition-transform transition-colors duration-200
+                          ease-out origin-bottom-left group-hover:scale-[1.25] group-hover:text-red-500"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                {/* keep stroke width visually constant while scaling */}
+                <path d="M7 17L17 7" vectorEffect="non-scaling-stroke" />
+                <path d="M9 7h8v8" vectorEffect="non-scaling-stroke" />
+              </svg>
+            </span>
+
+            <section className='items-center justify-center w-full h-full flex opacity-75 hover:text-red-500 active:border-r-[1px] active:border-b-[1px] active:text-red-500'>
+              <ProjectIcon className='absolute w-1/2 h-1/2'/>
+              <h2 className='text-md font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-5 '>Projects</h2>
+              <img src={dotsAni} alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 w-1/2 h-1/2 inset-0 opacity-100 transition-opacity duration-150 group-hover:opacity-50 pointer-events-none" draggable={false} />
+            </section>
+         </Link>
 
          {/* Now Status */}
         <section className="bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-3 p-6 rounded-lg hover:border-red-500 hover:border-1 transition duration-200">
-           <h2>Now?</h2>
+          
+            <div className='flex flex-col gap-2 p-2 pt-3'>
+              <h3 className='text-md'>Now</h3>
+            </div>
+            <Link to="/about" className="nav-card">
+            <h2>About Me</h2>
+          </Link>
         </section>
 
           {/* Colors */}
-        <section className="bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-1 p-6 rounded-lg hover:border-red-500 hover:border-1 transition duration-200">
+        <section className="bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-2 p-6 rounded-lg hover:border-red-500 hover:border-1 transition duration-200">
            <h2>Colors</h2>
         </section>
 

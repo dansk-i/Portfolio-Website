@@ -17,7 +17,7 @@ function LiveClockEST() {
   });
 
   return (
-    <div className="flex gap-2 text-2xl items-center justify-center font-mono font-light text-zinc-400">
+    <div className="flex gap-2 text-2xl items-center justify-center font-mono font-light text-zinc-500 truncate">
       <time
         dateTime={time.toISOString()}
         className=""
