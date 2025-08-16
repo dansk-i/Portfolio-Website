@@ -191,7 +191,14 @@ export default function Home() {
 
         {/* Colors */}
         <section className="bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-2 p-6 rounded-lg hover:border-red-500 hover:border-1 transition duration-200">
-          <h2>Colors</h2>
+          <div className='w-full h-full flex flex-row justify-center items-center'>
+              
+              <div className='p-1'><button className='w-10 h-10 rounded-full bg-white'></button></div>
+              <div className='p-1'><button className='w-10 h-10 rounded-full bg-red-500'></button></div>
+              <div className='p-1'><button className='w-10 h-10 rounded-full bg-blue-500'></button></div>
+              <div className='p-1'><button className='w-10 h-10 rounded-full bg-green-500'></button></div>
+             
+          </div>
         </section>
 
         {/* Trademark */}
