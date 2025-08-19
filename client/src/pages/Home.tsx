@@ -90,8 +90,8 @@ export default function Home() {
                 {showFact && (
 
                   <div className='absolute bottom-16 -translate-x-[69px] w-[200px] max-w-[200px]'>
-                    <div className={`bg-neutral-950 px-5 py-3 border border-red-500 border-1 border-r-[3px] border-b-[3px] rounded-bl-xl rounded-tl-lg rounded-br-lg rounded-tr-xl text-white text-center
-                                    after:rotate-45 after:w-5 after:h-5 after:absolute after:bottom-[-8px] after:left-1/2 after:-translate-x-2 after:bg-neutral-950 after:border-r-[1px] after:border-b-[1px] after:border-red-500`}>
+                    <div className={`bg-neutral-950 px-5 py-3 border ${colorClasses[bordColor].border} border-1 border-r-[3px] border-b-[3px] rounded-bl-xl rounded-tl-lg rounded-br-lg rounded-tr-xl text-white text-center
+                                    after:rotate-45 after:w-5 after:h-5 after:absolute after:bottom-[-8px] after:left-1/2 after:-translate-x-2 after:bg-neutral-950 after:border-r-[1px] after:border-b-[1px] ${colorClasses[bordColor].after}`}>
                       {facts[factIndex]}
                     </div>
                   </div>
