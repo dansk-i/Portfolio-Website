@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import './Home.css';
 import profilePic from '../assets/testimage.png';
 import { ReactComponent as GithubLogo } from '../assets/github.svg';
 import { ReactComponent as LinkedinLogo } from '../assets/linkedin.svg';
@@ -126,7 +125,7 @@ export default function Home() {
 
 
         {/* About Me */}
-        <section className={`bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-7 p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(1) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-7 p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(1) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
           <h2 className='text-lg font-bold pb-2'>About Me</h2>
           <div className='flex flex-col gap-2 text-sm font-light'>
             <p> Hi, I'm Daniel, a graphics programmer from Canada.</p> <br />
@@ -149,7 +148,7 @@ export default function Home() {
 
 
         {/* Email And Socials */}
-        <section className={`bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-4 p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(2) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-4 p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(2) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
           <h2 className='text-lg font-bold pb-5'>Let's start working together!</h2>
           <h2 className="italic text-zinc-500 pb-1">Contact Details</h2>
           <p className='italic text-sm pb-5'>daniel.sobalski2036@gmail.com <br />Canada</p>
@@ -200,7 +199,7 @@ export default function Home() {
         </Link>
 
         {/* Now Status */}
-        <section className={`bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-3 p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(5) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-3 p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(5) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
 
           <div className='flex flex-col gap-2 p-2 pt-3'>
             <h3 className='text-md'>Now</h3>
@@ -211,7 +210,7 @@ export default function Home() {
         </section>
 
         {/* Colors */}
-        <section className={`bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-1 p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(6) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-1 p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(6) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
           <div className='w-full h-full flex flex-row justify-center items-center'>
               
               <div className='p-2'><button className='w-10 h-10 rounded-full bg-rose-500 hover:border-white hover:border-2' onClick={() => setBordColor("red")}></button></div>
@@ -223,7 +222,7 @@ export default function Home() {
         </section>
 
         {/* Trademark */}
-        <section className={`bg-neutral-800 border border-zinc-600 align-start flex h-full justify-center relative col-span-1 row-span-1 p-8 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(7) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex h-full justify-center relative col-span-1 row-span-1 p-8 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(7) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
           <p className='text-xs '>© 2025 · Daniel</p>
         </section>
 

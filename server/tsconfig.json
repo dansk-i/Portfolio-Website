@@ -1,21 +1,21 @@
 {
   "compilerOptions": {
     /* Language and Environment */
-    "target": "es2020",          // ⬅️ 1) Bump target so Node 18+ features compile cleanly
+    "target": "es2020",          
     "module": "commonjs",
 
     /* Modules & Project Layout */
-    "rootDir": "./src",          // ⬅️ 2) Tell the compiler your source lives in /src
-    "outDir": "./dist",          // ⬅️ 3) Emit JavaScript into /dist when you run `npm run build`
+    "rootDir": "./src",         
+    "outDir": "./dist",          
 
-    /* Remaining options (keep what you already have) */
+    
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true
   },
 
-  /* NEW block — keeps the compiler fast and focused */
+ 
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
 }

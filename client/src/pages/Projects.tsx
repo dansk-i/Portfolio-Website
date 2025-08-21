@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import BackButton from '../components/BackButton';
-import './Projects.css';
 
 interface Project {
   id: number;
@@ -36,7 +35,8 @@ export default function Projects() {
   return (
     
     <div>
-      <BackButton />
+      <div className='absolute left-12 top-10'><BackButton /></div>
+      
       <div className='text-white flex flex-col items-center justify-center gap-6 p-6 overflow-hidden w-full h-full'>
     
 
@@ -44,13 +44,15 @@ export default function Projects() {
 
               <div className='flex-none w-full max-w-4xl grid grid-cols-2 gap-6'>
                 {projects.map(p => (
-                  <article key={p.id} className="bg-neutral-800 border border-zinc-600 p-6 rounded-lg hover:border-red-500 hover:border-2 transition duration-200">
-                    <h2>{p.title}</h2>
+                  <article key={p.id} className="bg-neutral-800 border border-zinc-600 p-6 rounded-lg hover:border-zinc-400 hover:border-1 transition duration-200">
+                    <h2 className='font-bold'>{p.title}</h2>
                     <p>{p.description}</p>
+                    <br />
                     <strong>Tech:</strong>
                     <ul>{p.tech.map(t => <li key={t}>{t}</li>)}</ul>
-                    <a href={p.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-                    {p.demo && <> · <a href={p.demo} target="_blank" rel="noopener noreferrer">Live</a></>}
+                    <br />
+                    <a href={p.github} target="_blank" rel="noopener noreferrer" className='font-bold hover:text-zinc-400'>GitHub</a>
+                    {p.demo && <> · <a href={p.demo} target="_blank" rel="noopener noreferrer" className='font-bold hover:text-zinc-400'>Live Site</a></>}
                   </article>
                 ))}
               </div>
