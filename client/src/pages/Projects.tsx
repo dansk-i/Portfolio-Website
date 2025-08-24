@@ -51,7 +51,7 @@ export default function Projects() {
                     <strong>Tech:</strong>
                     <ul>{p.tech.map(t => <li key={t}>{t}</li>)}</ul>
                     <br />
-                    <a href={p.github} target="_blank" rel="noopener noreferrer" className='font-bold hover:text-zinc-400'>GitHub</a>
+                    {p.github && <>  <a href={p.github} target="_blank" rel="noopener noreferrer" className='font-bold hover:text-zinc-400'>GitHub</a></>}
                     {p.demo && <> · <a href={p.demo} target="_blank" rel="noopener noreferrer" className='font-bold hover:text-zinc-400'>Live Site</a></>}
                   </article>
                 ))}

@@ -3,6 +3,6 @@ export interface Project {
   title: string;           // project name
   description: string;     // short summary
   tech: string[];          // list of main technologies used
-  github: string;          // GitHub repo URL
+  github?: string;          // GitHub repo URL
   demo?: string;           // live demo URL
 }

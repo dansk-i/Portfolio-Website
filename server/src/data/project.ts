@@ -1,6 +1,5 @@
-import { Project } from '../types/Project';   // relative to data/ folder
+import { Project } from '../types/Project'; 
 
-// In-memory mock data.  Replace or extend as you build real projects.
 export const projects: Project[] = [
   {
     id: 1,
@@ -8,7 +7,7 @@ export const projects: Project[] = [
     description:
       'Full-stack personal site built with React, Express, and TypeScript.',
     tech: ['React', 'TypeScript', 'Express', 'Node.js'],
-    github: 'https://github.com/yourname/portfolio-website',
+    github: 'https://github.com/dansk-i/Portfolio-Website',
     demo: 'https://yourdomain.com'
   },
   {
@@ -16,7 +15,6 @@ export const projects: Project[] = [
     title: 'Dancord Chat App',
     description:
       'Discord-style real-time chat using Socket.io and Redis pub/sub.',
-    tech: ['React', 'Socket.io', 'Redis', 'MongoDB'],
-    github: 'https://github.com/yourname/dancord'
+    tech: ['React', 'Socket.io', 'Redis', 'MongoDB']
   }
 ];
