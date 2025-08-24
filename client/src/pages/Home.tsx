@@ -200,13 +200,12 @@ export default function Home() {
 
         {/* Now Status */}
         <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-3 p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(5) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
-
-          <div className='flex flex-col gap-2 p-2 pt-3'>
-            <h3 className='text-md'>Now</h3>
+            
+            <h2 className='text-sm text-zinc-500'>Now?</h2>
+          <div className='flex flex-col gap-2 p-1 pt-3 text-sm font-light'>
+            <h2>Currently finishing my studies and looking for oppurtunities to collaborate on impactful projects!</h2>
           </div>
-          <Link to="/about" className="nav-card">
-            <h2>About Me</h2>
-          </Link>
+          
         </section>
 
         {/* Colors */}
