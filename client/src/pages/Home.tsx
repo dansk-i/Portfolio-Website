@@ -209,8 +209,8 @@ export default function Home() {
         </section>
 
         {/* Colors */}
-        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-1 max-sm:col-span-1 max-sm:row-span-1 max-sm:min-h-[100px] p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(6) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
-          <div className='w-full h-full flex flex-row justify-center items-center'>
+        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start col-span-1 row-span-1 max-sm:col-span-1 max-sm:row-span-1 max-sm:min-h-[100px] p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(6) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+          <div className='w-full h-full flex flex-row justify-center items-center pt-2'>
               
               <div className='p-2'><button className='w-10 h-10 rounded-full bg-rose-500 hover:border-white hover:border-2' onClick={() => setBordColor("red")}></button></div>
               <div className='p-2'><button className='w-10 h-10 rounded-full bg-violet-500 hover:border-white hover:border-2' onClick={() => setBordColor("violet")}></button></div>
