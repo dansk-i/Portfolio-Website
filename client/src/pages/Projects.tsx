@@ -40,9 +40,9 @@ export default function Projects() {
       <div className='text-white flex flex-col items-center justify-center gap-6 p-6 overflow-hidden w-full h-full'>
     
 
-              <h1>Projects</h1>
+              <h1 className='font-bold text-xl'>Projects</h1>
 
-              <div className='flex-none w-full max-w-4xl grid grid-cols-2 gap-6'>
+              <div className='flex-none w-full max-w-4xl grid grid-cols-2 gap-6 pt-4 max-sm:grid-cols-1'>
                 {projects.map(p => (
                   <article key={p.id} className="bg-neutral-800 border border-zinc-600 p-6 rounded-lg hover:border-zinc-400 hover:border-1 transition duration-200">
                     <h2 className='font-bold'>{p.title}</h2>

@@ -78,7 +78,7 @@ export default function Home() {
 
 
               {/* Logo Links */}
-              <div className='flex flex-row gap-4 justify-start place-items-center'>
+              <div className='flex flex-row gap-4 justify-start place-items-center max-sm:pt-4'>
 
                 <div className='w-20'>
                   <button onClick={() => window.open("https://github.com/dansk-i", "_blank")}
@@ -118,7 +118,7 @@ export default function Home() {
 
             </div>
 
-          <img src={profilePic} alt='Profile' className='w-auto max-h-[300px] select-none border-2' />
+          <img src={profilePic} alt='Profile' className='w-auto max-h-[300px] select-none border-2 max-sm:hidden' />
 
         </div>
 
