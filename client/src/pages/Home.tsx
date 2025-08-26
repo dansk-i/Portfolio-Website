@@ -62,10 +62,10 @@ export default function Home() {
   return (
 
     <div className="flex flex-col items-center justify-center">
-      <main className="text-white m-auto grid grid-cols-4 grid-rows-8 gap-4 max-w-6xl overflow-hidden w-full h-full p-6 h-screen max-h-[800px] font-mono">
+      <main className="text-white m-auto grid grid-cols-4 grid-rows-8 gap-4 max-w-6xl overflow-hidden w-full h-full p-6 h-screen max-h-[800px] font-mono max-sm:grid-cols-1 max-sm:grid-rows-none max-sm:h-auto max-sm:max-h-none max-sm:overflow-visible">
 
         {/* Main Header */}
-        <div className={`flex w-full h-full bg-neutral-800 border border-zinc-600 col-span-3 row-span-4 align-start justify-start p-6 pb-10 rounded-lg overflow-hidden ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(0) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+        <div className={`flex w-full h-full bg-neutral-800 border border-zinc-600 col-span-3 row-span-4 max-sm:col-span-1 max-sm:row-span-1 max-sm:min-h-[250px] align-start justify-start p-6 pb-10 rounded-lg overflow-hidden ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(0) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
           <div className="flex flex-col justify-between">
             <div className=''>
               <h2 className="text-sm font-light m-0 text-zinc-500">welcome</h2>
@@ -125,7 +125,7 @@ export default function Home() {
 
 
         {/* About Me */}
-        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-7 p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(1) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-7 max-sm:col-span-1 max-sm:row-span-1 max-sm:min-h-[250px] p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(1) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
           <h2 className='text-lg font-bold pb-2'>About Me</h2>
           <div className='flex flex-col gap-2 text-sm font-light'>
             <p> Hi, I'm Daniel, a graphics programmer from Canada.</p> <br />
@@ -148,7 +148,7 @@ export default function Home() {
 
 
         {/* Email And Socials */}
-        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-4 p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(2) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-4 max-sm:col-span-1 max-sm:row-span-1 max-sm:min-h-[250px] p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(2) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
           <h2 className='text-lg font-bold pb-5'>Let's start working together!</h2>
           <h2 className="italic text-zinc-500 pb-1">Contact Details</h2>
           <p className='italic text-sm pb-5'>daniel.sobalski2036@gmail.com <br />Canada</p>
@@ -162,7 +162,7 @@ export default function Home() {
         </section>
 
         {/* Clock */}
-        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-center flex-none h-full justify-center relative col-span-1 row-span-1 p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 focus:outline-none focus:ring-2 focus:ring-red-500/40 transition-all duration-700 ease-out transform ${visBlocks.includes(3) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-center flex-none h-full justify-center relative col-span-1 row-span-1 max-sm:col-span-1 max-sm:row-span-1 max-sm:min-h-[75px] p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 focus:outline-none focus:ring-2 focus:ring-red-500/40 transition-all duration-700 ease-out transform ${visBlocks.includes(3) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
           <span className="absolute top-4 right-4 flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-50"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600 opacity-75"></span>
@@ -172,7 +172,7 @@ export default function Home() {
         </section>
 
         {/* Projects */}
-        <Link to="/projects" draggable={false} className={`group overflow-hidden relative bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start col-span-1 row-span-3 p-2 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(4) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+        <Link to="/projects" draggable={false} className={`group overflow-hidden relative bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start col-span-1 row-span-3 max-sm:col-span-1 max-sm:row-span-1 max-sm:min-h-[250px] p-2 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(4) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
           <img src={codingAni} alt="" className="scale-[3] absolute inset-0 opacity-0 rounded-lg transition-opacity duration-150 group-hover:opacity-20 pointer-events-none" draggable={false} />
           <span className="pointer-events-none absolute right-5 top-5">
             <svg
@@ -199,7 +199,7 @@ export default function Home() {
         </Link>
 
         {/* Now Status */}
-        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-3 p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(5) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-3 max-sm:col-span-1 max-sm:row-span-1 max-sm:min-h-[250px] p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(5) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
             
             <h2 className='text-sm text-zinc-500'>Now?</h2>
           <div className='flex flex-col gap-2 p-1 pt-3 text-sm font-light'>
@@ -209,7 +209,7 @@ export default function Home() {
         </section>
 
         {/* Colors */}
-        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-1 p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(6) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-1 max-sm:col-span-1 max-sm:row-span-1 max-sm:min-h-[100px] p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(6) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
           <div className='w-full h-full flex flex-row justify-center items-center'>
               
               <div className='p-2'><button className='w-10 h-10 rounded-full bg-rose-500 hover:border-white hover:border-2' onClick={() => setBordColor("red")}></button></div>
@@ -221,7 +221,7 @@ export default function Home() {
         </section>
 
         {/* Trademark */}
-        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex h-full justify-center relative col-span-1 row-span-1 p-8 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(7) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+        <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex h-full justify-center relative col-span-1 row-span-1 max-sm:col-span-1 max-sm:row-span-1 max-sm:min-h-[75px] p-8 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(7) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
           <p className='text-xs '>© 2025 · Daniel</p>
         </section>
 
