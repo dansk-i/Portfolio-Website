@@ -20,7 +20,7 @@ export default function Projects() {
   }, []);
   
   useEffect(() => {
-    fetch('/api/project')
+    fetch(`${process.env.PUBLIC_URL}/projects.json`)
       .then(res => {
         if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
         return res.json();

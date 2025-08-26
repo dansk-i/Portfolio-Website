@@ -13,7 +13,7 @@ export default function App() {
       {/* Main app routing */}
       <div className="relative z-10">
 
-        <BrowserRouter>
+        <BrowserRouter basename="/Portfolio-Website">
           <Routes>
             <Route path="/"         element={<Home />} />
             <Route path="/projects" element={<Projects />} />
