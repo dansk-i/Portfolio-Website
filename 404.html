@@ -1,8 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=/" />
+    <meta charset="UTF-8" />
+    <title>Redirecting…</title>
+    <script type="text/javascript">
+      //force redirect to index.html
+      var redirectTo = window.location.origin + '/?' + 
+        (window.location.pathname ? 'p=' + window.location.pathname.slice(1) + '&' : '') + 
+        window.location.search.slice(1) + 
+        window.location.hash;
+      window.location.replace(redirectTo);
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/" />
+    </noscript>
   </head>
   <body>
+    <p>Redirecting…</p>
   </body>
 </html>
