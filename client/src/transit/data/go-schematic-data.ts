@@ -1,0 +1,212 @@
+export const goLines = [
+    {
+        id: "barrie",
+        name: "Barrie Line",
+        color: "#326fb6",
+        thickness: 8,
+        pathPoints: [
+            { cmd: "M", x: 0, y: 210.5 }, 
+            { cmd: "L", x: -140.5, y: 210.5 },
+            { cmd: "L", x: -225, y: 123.5},
+            { cmd: "L", x: -225, y: -212.5 },
+            //{ cmd: "L", x: -200, y: -200 },
+           // { cmd: "L", x: -200, y: -250 },
+            { cmd: "L", x: -125, y: -310 },
+            { cmd: "L", x: -125, y: -600 },
+            { cmd: "L", x: -75, y: -650 },
+            { cmd: "L", x: -75, y: -750 },
+            { cmd: "L", x: -125, y: -800 },
+            { cmd: "L", x: -125, y: -950 },
+            
+        ],
+        stations: [
+           { id: "union", name: "Union", x: 0, y: 200, type: "union" },
+        ],
+    },
+    {
+    id: "kitchener",
+    name: "Kitchener Line",
+    color: "#08783f",
+    thickness: 8,
+    pathPoints: [
+        { cmd: "M", x: 0, y: 218 },    
+        { cmd: "L", x: -144, y: 218 },
+        { cmd: "L", x: -250, y: 109 },   
+        { cmd: "L", x: -250, y: 0 },
+        { cmd: "L", x: -300, y: -50 },
+        { cmd: "L", x: -300, y: -125 },
+        { cmd: "L", x: -350, y: -187.5 },
+        { cmd: "L", x: -725, y: -187.5, svc: "limited" },
+        { cmd: "L", x: -975, y: -187.5, svc: "peakOnly" },
+        { cmd: "L", x: -1500, y: -187.5 },
+    ],
+    stations: [
+        { id: "dundasWest", name: "Dundas West", x: -259, y: 25, type: "interchange-sm-2" },
+        { id: "mountDennis", name: "Mount Dennis", x: -309, y: -100, type: "interchange-sm-2" },
+        //{ id: "weston", name: "Weston", x: -362.5, y: -189, type: "interchange-sm-3" },
+        //{ id: "woodbine", name: "Woodbine", x: -500, y: -189, type: "interchange-sm-3" },
+        // { id: "malton", name: "Malton", x: -600, y: -187.5, type: "normal-sm" },
+        // { id: "bramalea", name: "Bramalea", x: -725, y: -187.5, type: "normal-sm" },
+        // { id: "brampton", name: "Brampton", x: -850, y: -187.5, type: "normal-sm" },
+        // { id: "mountPleasant", name: "Mount Pleasant", x: -975, y: -187.5, type: "normal-sm" },
+        // { id: "georgetown", name: "Georgetown", x: -1075, y: -187.5, type: "normal-sm" },
+        // { id: "acton", name: "Acton", x: -1175, y: -187.5, type: "normal-sm" },
+        // { id: "guelph", name: "Guelph", x: -1275, y: -187.5, type: "normal-sm" },
+        // { id: "breslau", name: "Breslau", x: -1375, y: -187.5, type: "normal-sm" },
+        //{ id: "kitchener", name: "Kitchener", x: -1500, y: -187.5, type: "normal-sm" },
+    ],
+  },
+  {
+    id: "upExpress",
+    name: "UP Express",
+    color: "#798e27",
+    thickness: 8,
+    pathPoints: [
+        { cmd: "M", x: 0, y: 226 },      
+        { cmd: "L", x: -147.5, y: 226 },
+        { cmd: "L", x: -258, y: 112 }, 
+        { cmd: "L", x: -258, y: 3 },
+        { cmd: "L", x: -308, y: -47 },
+        { cmd: "L", x: -308, y: -122 },
+        { cmd: "L", x: -354, y: -180 },
+        { cmd: "L", x: -550, y: -180 },
+        { cmd: "L", x: -575, y: -150 },
+    ],
+    stations: [
+        { id: "pearson", name: "Pearson Airport", x: -575, y: -150, type: "normal-sm" },
+    ],
+  },
+  {
+    id: "milton",
+    name: "Milton Line",
+    color: "#ffb61abc",
+    thickness: 8,
+    pathPoints: [
+        { cmd: "M", x: 0, y: 234, svc: "peakOnly" },      
+        { cmd: "L", x: -151, y: 234 },
+        { cmd: "L", x: -266, y: 115 }, 
+        { cmd: "L", x: -266, y: 6},
+        { cmd: "L", x: -302.5, y: -30 },
+        { cmd: "L", x: -505, y: -30 },
+        { cmd: "L", x: -525, y: -5 },
+        { cmd: "L", x: -525, y: 75 },
+        { cmd: "L", x: -562.5, y: 115 },
+        { cmd: "L", x: -765, y: 115 },
+        { cmd: "L", x: -800, y: 90 },
+        { cmd: "L", x: -800, y: 10 },
+        { cmd: "L", x: -820, y: -10 },
+        { cmd: "L", x: -1100, y: -10 },
+    ],
+    stations: [
+        { id: "lansdowne", name: "Lansdowne", x: -225, y: 25, type: "interchange-sm" },
+    ],
+  },
+
+  {
+    id: "lakeShoreWest-Hamilton",
+    name: "Hamilton Lakeshore West",
+    color: "#951938",
+    thickness: 8,
+    pathPoints: [
+      
+        { cmd: "M", x: -925, y: 450, svc: "peakOnly" },
+        { cmd: "L", x: -925, y: 537.5 },
+        { cmd: "L", x: -905, y: 560 },
+        { cmd: "L", x: -800, y: 560 },
+        
+        
+    ],
+    stations: [
+        //{ id: "exhibitionGO", name: "Exhibition GO", x: -187.5, y: 242, type: "interchange" },
+        
+    ],
+  },
+  {
+    id: "lakeShoreWest",
+    name: "Lakeshore West Line",
+    color: "#951938",
+    thickness: 8,
+    pathPoints: [
+        { cmd: "M", x: 0, y: 242 }, 
+        { cmd: "L", x: -870, y: 242 },
+        { cmd: "L", x: -925, y: 302, svc: "limited" },
+        { cmd: "L", x: -925, y: 450 },
+        { cmd: "L", x: -875, y: 495 },
+        { cmd: "L", x: -625, y: 495, svc: "peakOnly" },
+        { cmd: "L", x: -150, y: 495 },
+        
+    ],
+    stations: [
+        { id: "exhibitionGO", name: "Exhibition GO", x: -187.5, y: 242, type: "interchange" },
+        // { id: "mimico", name: "Mimico", x: -412.5, y: 242, type: "normal-sm" },
+        // { id: "longBranch", name: "Long Branch", x: -475, y: 242, type: "normal-sm" },
+        // { id: "portCreditGo", name: "Port Credit Go", x: -550, y: 242, type: "normal-sm" },
+
+    ],
+  },
+
+  {
+    id: "lakeShoreEast",
+    name: "Lakeshore East Line",
+    color: "#e12626",
+    thickness: 8,
+    pathPoints: [
+        { cmd: "M", x: 0, y: 242 }, 
+        { cmd: "L", x: 100, y: 242 },
+        { cmd: "L", x: 128, y: 242 },
+        { cmd: "L", x: 180, y: 242 },
+        { cmd: "L", x: 217, y: 213 },
+        { cmd: "L", x: 217, y: 100 },
+        { cmd: "L", x: 232.5, y: 80.5 },
+        { cmd: "L", x: 327.5, y: 80.5 },
+        { cmd: "L", x: 367.5, y: 42},
+        { cmd: "L", x: 525, y: 42},
+        { cmd: "L", x: 625, y: -52.5},
+        { cmd: "L", x: 625, y: -110},
+        { cmd: "L", x: 660, y: -142.5},
+        //{ cmd: "L", x: 700, y: -142.5},
+        { cmd: "L", x: 717.5, y: -142.5},
+        { cmd: "L", x: 910, y: -142.5},
+        { cmd: "L", x: 1050, y: -300},
+        { cmd: "L", x: 1300, y: -300, svc: "limited" },
+        { cmd: "L", x: 1500, y: -300},
+        { cmd: "L", x: 1550, y: -350},
+
+        
+    ],
+    stations: [
+        { id: "eastHarbourGO", name: "East Harbour GO", x: 165, y: 233, type: "interchange-sm-3" },
+        
+    ],
+  },
+  {
+    id: "stouffville",
+    name: "Stouffville Line",
+    color: "#88512b",
+    thickness: 8,
+    pathPoints: [
+        { cmd: "M", x: 0, y: 218 }, 
+        { cmd: "L", x: 104, y: 218 },
+        { cmd: "L", x: 122, y: 234 },
+        { cmd: "L", x: 178, y: 234 },
+        { cmd: "L", x: 209, y: 209 },
+        { cmd: "L", x: 209, y: 97.5},
+        { cmd: "L", x: 230, y: 72.5 },
+        { cmd: "L", x: 325, y: 72.5 },
+        { cmd: "L", x: 365, y: 34},
+        { cmd: "L", x: 470, y: 34},
+        { cmd: "L", x: 500, y: 0 },
+        { cmd: "L", x: 500, y: -375, svc: "limited" },
+        { cmd: "L", x: 500, y: -425},
+        { cmd: "L", x: 550, y: -475},
+        { cmd: "L", x: 550, y: -537.5, svc: "peakOnly" },
+        { cmd: "L", x: 550, y: -600},
+        
+    ],
+    stations: [
+       // { id: "eastHarbourGO", name: "East Harbour GO", x: 100, y: 232.5, type: "interchange-sm-3" },
+        
+    ],
+  },
+  
+];

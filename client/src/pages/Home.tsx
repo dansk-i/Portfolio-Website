@@ -172,7 +172,7 @@ export default function Home() {
         </section>
 
         {/* Projects */}
-        <Link to="/projects" draggable={false} className={`group overflow-hidden relative bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start col-span-1 row-span-3 max-sm:col-span-1 max-sm:row-span-1 max-sm:min-h-[250px] p-2 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(4) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+        <Link to="/transit" draggable={false} className={`group overflow-hidden relative bg-neutral-800 border border-zinc-600 align-start flex-none h-full justify-start col-span-1 row-span-3 max-sm:col-span-1 max-sm:row-span-1 max-sm:min-h-[250px] p-2 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(4) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
           <img src={codingAni} alt="" className="scale-[3] absolute inset-0 opacity-0 rounded-lg transition-opacity duration-150 group-hover:opacity-20 pointer-events-none" draggable={false} />
           <span className="pointer-events-none absolute right-5 top-5">
             <svg
