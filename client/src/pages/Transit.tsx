@@ -10,7 +10,7 @@ export default function Transit() {
       </div>
 
       {/* Optional: small overlay controls (can delete if you want pure map) */}
-      <div className="pointer-events-none absolute left-4 top-4 z-50 flex gap-2">
+      <div className="pointer-events-none absolute right-4 top-4 z-50 flex gap-2">
         <Link
           to="/"
           className="pointer-events-auto rounded-xl border border-white/15 bg-black/50 px-3 py-2 text-sm text-white backdrop-blur hover:bg-black/65"

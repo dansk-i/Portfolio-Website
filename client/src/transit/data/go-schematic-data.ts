@@ -208,5 +208,32 @@ export const goLines = [
         
     ],
   },
+  {
+    id: "richmondHill",
+    name: "Richmond Hill Line",
+    color: "#319387ff",
+    thickness: 8,
+    pathPoints: [
+        { cmd: "M", x: 0, y: 210, svc: "peakOnly" },
+        { cmd: "L", x: 102.5, y: 210 },
+        { cmd: "L", x: 112.5, y: 200 },
+        { cmd: "L", x: 112.5, y: -35},
+        { cmd: "L", x: 125, y: -50},
+        { cmd: "L", x: 250, y: -50},
+        { cmd: "L", x: 275, y: -75},
+        { cmd: "L", x: 275, y: -155},
+        { cmd: "L", x: 250, y: -180},
+        { cmd: "L", x: 200, y: -180},
+        { cmd: "L", x: 175, y: -210},
+        { cmd: "L", x: 175, y: -300},
+        { cmd: "L", x: 85, y: -375},
+        {cmd: "L", x: 85, y: -650},
+       
+    ],
+    stations: [
+       // { id: "eastHarbourGO", name: "East Harbour GO", x: 100, y: 232.5, type: "interchange-sm-3" },
+        
+    ],
+  },
   
 ];
