@@ -192,9 +192,9 @@ export default function Home() {
           </span>
 
           <section className={`items-center justify-center w-full h-full flex opacity-75 ${colorClasses[bordColor].text} hover:opacity-65`}>
-            <ProjectIcon className='absolute w-1/2 h-1/2' />
-            <h2 className='text-md font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-5 '>Projects</h2>
-            <img src={dotsAni} alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 w-1/2 h-1/2 inset-0 opacity-100 transition-opacity duration-150 group-hover:opacity-50 pointer-events-none" draggable={false} />
+            <ProjectIcon className='absolute w-1/3 h-1/3' />
+            {/* <h2 className='text-md font-bold absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-16 '>Toronto Transit Map</h2>
+            <img src={dotsAni} alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 w-1/2 h-1/2 inset-0 opacity-100 transition-opacity duration-150 group-hover:opacity-50 pointer-events-none" draggable={false} /> */}
           </section>
         </Link>
 
