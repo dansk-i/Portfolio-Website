@@ -1,5 +1,4 @@
 {
-  "homepage": "https://dansk-i.github.io/Portfolio-Website",
   "dependencies": {
     "cors": "^2.8.5"
   },
