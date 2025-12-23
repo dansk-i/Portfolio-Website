@@ -15,6 +15,7 @@ import lakeUrl2 from "./assets/lakes2.svg";
 // import goRichmondHill from "./assets/GO_Richmond_Hill.svg";
 // import goStouffville from "./assets/GO_Stouffville.svg";
 // import upExpress from "./assets/UP_Express.svg";
+import { useCallback } from "react";
 
 // ---------------------------------------------------------------------------
 
@@ -323,12 +324,10 @@ export default function SchematicMap() {
   const centerX = MAP_W / 2;
   const centerY = (MAP_H / 2) + 25;
 
-  // Clamp offsets so you never go beyond original viewBox edges
-  const clampOffset = (x: number, y: number, z: number) => {
+ const clampOffset = useCallback((x: number, y: number, z: number) => {
     const scaledW = MAP_W * z;
     const scaledH = MAP_H * z;
 
-    // when z < 1, (scaledW - MAP_W) is negative → clamp to 0 to avoid weirdness
     const maxX = Math.max(0, (scaledW - MAP_W) / 2);
     const maxY = Math.max(0, (scaledH - MAP_H) / 2);
 
@@ -336,7 +335,7 @@ export default function SchematicMap() {
       x: Math.min(maxX, Math.max(-maxX, x)),
       y: Math.min(maxY, Math.max(-maxY, y)),
     };
-  };
+  }, [MAP_W, MAP_H]);
 
   // Scroll wheel zoom (cursor-aware)
   useEffect(() => {
