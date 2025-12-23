@@ -15,6 +15,13 @@ import goMilton from "./assets/GO_Milton.svg";
 import goRichmondHill from "./assets/GO_Richmond_Hill.svg";
 import goStouffville from "./assets/GO_Stouffville.svg";
 import upExpress from "./assets/UP_Express.svg";
+import ttcLogo from "./assets/TTC.svg";
+import goLogo from "./assets/goLogo.svg";
+import line1Logo from "./assets/Line_1.svg";
+import line2Logo from "./assets/Line_2.svg";
+import line4Logo from "./assets/Line_4.svg";
+import line5Logo from "./assets/Line_5.svg";
+import line6Logo from "./assets/Line_6.svg";
 import { useCallback } from "react";
 
 // ---------------------------------------------------------------------------
@@ -36,22 +43,20 @@ type PopupPlacement = "left" | "right" | "top" | "bottom";
 type PopupState =
   | {
       kind: "line";
-      x: number; // px relative to container
+      x: number;
       y: number;
       name: string;
-      color?: string;
-      logo?: React.ReactNode;
+      icons: React.ReactNode[]; // ✅ multiple SVGs supported
     }
   | {
       kind: "station";
       x: number;
       y: number;
       name: string;
-      logo?: React.ReactNode;
-      // you can expand this later
-      details?: Array<{ label: string; value: string }>;
+      icons: React.ReactNode[]; // ✅ multiple connections supported
     }
   | null;
+
 
 function clamp(v: number, min: number, max: number) {
   return Math.max(min, Math.min(max, v));
@@ -60,22 +65,23 @@ function clamp(v: number, min: number, max: number) {
 function LineBadge({ color }: { color?: string }) {
   return (
     <div
-      className="h-8 w-8 rounded-xl border border-white/10"
+      className="h-12 w-12 rounded-xl border border-white/10"
       style={{ backgroundColor: color ?? "rgba(255,255,255,0.15)" }}
       aria-hidden="true"
     />
   );
 }
 
-// Placeholder logo (swap this with real SVG whenever)
+
 function TTCLogo() {
-  return (
-    <svg viewBox="0 0 64 64" className="h-8 w-8" aria-hidden="true">
-      <circle cx="32" cy="32" r="30" fill="currentColor" opacity="0.15" />
-      <path d="M16 22h32v6H35v22h-6V28H16z" fill="currentColor" opacity="0.9" />
-    </svg>
-  );
+  return <img src={ttcLogo} className="h-12 w-12" alt="TTC" />;
 }
+
+function GOLogo() {
+  return <img src={goLogo} className="h-12 w-12" alt="GO Transit" />;
+}
+
+
 
 const LINE_LOGOS: Record<string, React.ReactNode> = {
     //GO lines (keyed by goLines[i].id)
@@ -92,64 +98,71 @@ const LINE_LOGOS: Record<string, React.ReactNode> = {
     // Special cases / branches that should share a logo:
     "lakeShoreWest-Hamilton": <img src={goLakeshoreWest} className="h-10 w-10" alt="Lakeshore West (Hamilton)" />,
 
-    // TTC subway (if you want to keep these)
-    "Line 1": <TTCLogo />,
-    "Line 2": <TTCLogo />,
-    "Line 4": <TTCLogo />,
+    // TTC line icons
+    line1: <img src={line1Logo} className="h-10 w-auto" alt="Line 1" />,
+    line2: <img src={line2Logo} className="h-10 w-auto" alt="Line 2" />,
+    line4: <img src={line4Logo} className="h-10 w-auto" alt="Line 4" />,
+    line5: <img src={line5Logo} className="h-10 w-auto" alt="Line 5" />,
+    "line5-surface": <img src={line5Logo} className="h-10 w-auto" alt="Line 5" />,
+    line6: <img src={line6Logo} className="h-10 w-auto" alt="Line 6" />,
+
+    // Streetcars (keyed by streetcarLines[i].id)
+    "501": <TTCLogo />,
+    "504A": <TTCLogo />,
+    "504B": <TTCLogo />,
+    "510": <TTCLogo />,
+    "511": <TTCLogo />,
+    "506": <TTCLogo />,
+    "505": <TTCLogo />,
+    "503": <TTCLogo />,
+    "508": <TTCLogo />,
+    "509": <TTCLogo />,
+    "512": <TTCLogo />,
+
+
 };
 
 
 
-function LinePopupContent({ logo, name }: { logo?: React.ReactNode; name: string }) {
+function IconStrip({ icons }: { icons: React.ReactNode[] }) {
   return (
     <div className="flex items-center gap-3">
-      <div className="shrink-0">{logo}</div>
-      <div>
-        <div className="text-sm font-semibold leading-tight">{name}</div>
-        <div className="mt-1 text-xs text-white/70">Line</div>
-      </div>
+      {icons.map((icon, i) => (
+        <div key={i} className="shrink-0">
+          {icon}
+        </div>
+      ))}
     </div>
   );
 }
 
-function StationPopupContent({
-  logo,
-  name,
-  details,
-}: {
-  logo?: React.ReactNode;
-  name: string;
-  details?: Array<{ label: string; value: string }>;
-}) {
-  return (
-    <div className="min-w-[260px]">
-      {/* Header with logo slot */}
-      <div className="flex items-center gap-3 border-b border-white/10 pb-3">
-        <div className="shrink-0">{logo}</div>
-        <div className="min-w-0">
-          <div className="text-base font-semibold leading-tight">{name}</div>
-          <div className="mt-0.5 text-xs text-white/70">Station</div>
+
+function PopupMainContent({
+    icons,
+    name,
+  }: {
+    icons: React.ReactNode[];
+    name: string;
+  }) {
+    return (
+      <div className="min-w-[240px]">
+        <div className="flex items-center gap-4">
+          {/* left: icons */}
+          <IconStrip icons={icons} />
+
+          {/* divider between icons area and text */}
+          <div className="h-10 w-px bg-white/20" />
+
+          {/* right: name */}
+          <div className="text-sm font-semibold leading-tight whitespace-nowrap">
+            {name}
+          </div>
         </div>
       </div>
+    );
+  }
 
-      {/* Details */}
-      <div className="pt-3 space-y-2">
-        {details?.length ? (
-          details.map((d, i) => (
-            <div key={i} className="flex items-start justify-between gap-3">
-              <div className="text-xs text-white/60">{d.label}</div>
-              <div className="text-xs text-white/85 text-right">{d.value}</div>
-            </div>
-          ))
-        ) : (
-          <div className="text-sm text-white/75 leading-relaxed">
-            Station details go here (lines served, transfers, accessibility, notes).
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
+
 
 function MapPopup({
   x,
@@ -222,6 +235,7 @@ function MapPopup({
 export default function SchematicMap() {
   const containerRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement | null>(null);
+  const goIds = new Set(goLines.map(l => l.id));
 
   const [zoom, setZoom] = useState(2);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
@@ -264,44 +278,55 @@ export default function SchematicMap() {
 
 
   const showLinePopup = (
-    e: React.MouseEvent,
-    displayName: string,
-    lineColor?: string,
-    logoKey?: string
-  ) => {
-    const p = getRelativePoint(e);
-    if (!p) return;
+      e: React.MouseEvent,
+      displayName: string,
+      lineColor?: string,
+      logoKey?: string
+    ) => {
+      const p = getRelativePoint(e);
+      if (!p) return;
 
-    const key = logoKey ?? displayName;
+      const key = logoKey ?? displayName;
+      const lineIcon = LINE_LOGOS[key] ?? <LineBadge color={lineColor} />;
 
-    setPopup({
-      kind: "line",
-      x: p.x,
-      y: p.y,
-      name: displayName, 
-      color: lineColor,
-      logo: LINE_LOGOS[key] ?? <LineBadge color={lineColor} />, 
-    });
-  };
+      let icons: React.ReactNode[] = [lineIcon];
+
+      if (goIds.has(key) && key !== "upExpress") {
+        icons = [<GOLogo />, lineIcon];
+      }
+
+      setPopup({
+        kind: "line",
+        x: p.x,
+        y: p.y,
+        name: displayName,
+        icons,
+      });
+    };
 
 
-  const showStationPopupAt = (stationName: string, svgX: number, svgY: number) => {
-  const p = svgPointToContainerPx(svgX, svgY);
-  if (!p) return;
 
-  setPopup({
-    kind: "station",
-    x: p.x,
-    y: p.y,
-    name: stationName,
-    logo: <TTCLogo />,
-    details: [
-      { label: "Lines", value: "Line 1" },
-      { label: "Transfers", value: "—" },
-      { label: "Accessibility", value: "—" },
-    ],
-  });
-};
+
+
+  const showStationPopupAt = (
+      stationName: string,
+      svgX: number,
+      svgY: number,
+      icons?: React.ReactNode[]
+    ) => {
+      const p = svgPointToContainerPx(svgX, svgY);
+      if (!p) return;
+
+      setPopup({
+        kind: "station",
+        x: p.x,
+        y: p.y,
+        name: stationName,
+        icons: icons ?? [<TTCLogo />], 
+      });
+    };
+
+
 
 
 
@@ -596,7 +621,6 @@ export default function SchematicMap() {
   proposedLines.forEach(l => srcByRef.set(l, "proposed"));
   streetcarLines.forEach(l => srcByRef.set(l, "streetcar"));
 
-  const goIds = new Set(goLines.map(l => l.id));
 
   // Merge active lines
   const activeLines = [
@@ -1052,7 +1076,8 @@ export default function SchematicMap() {
         }
 
       </svg>
-        {popup && (
+       
+       {popup && (
         <MapPopup
           x={popup.x}
           y={popup.y}
@@ -1061,13 +1086,10 @@ export default function SchematicMap() {
           containerWidth={containerRef.current?.getBoundingClientRect().width}
           containerHeight={containerRef.current?.getBoundingClientRect().height}
         >
-          {popup.kind === "line" ? (
-            <LinePopupContent logo={popup.logo} name={popup.name} />
-          ) : (
-            <StationPopupContent logo={popup.logo} name={popup.name} details={popup.details} />
-          )}
+          <PopupMainContent icons={popup.icons} name={popup.name} />
         </MapPopup>
       )}
+
     </div>
   );
 }
