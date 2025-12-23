@@ -368,19 +368,23 @@ export default function SchematicMap() {
         if (newZ === Z_MIN) {
           setOffset({ x: 0, y: 0 });
         } else {
-          const newOffset = {
-            x: offset.x + (z - newZ) * mouseVec.x,
-            y: offset.y + (z - newZ) * mouseVec.y,
-          };
-          setOffset(clampOffset(newOffset.x, newOffset.y, newZ));
+          setOffset((prev) => {
+            const next = {
+              x: prev.x + (z - newZ) * mouseVec.x,
+              y: prev.y + (z - newZ) * mouseVec.y,
+            };
+            return clampOffset(next.x, next.y, newZ);
+          });
         }
 
         return newZ;
       });
     };
-    window.addEventListener("wheel", handleWheel, { passive: false });
-    return () => window.removeEventListener("wheel", handleWheel);
-  }, [offset, clampOffset]);
+
+  window.addEventListener("wheel", handleWheel, { passive: false });
+  return () => window.removeEventListener("wheel", handleWheel);
+}, [clampOffset, Z_MAX, Z_MIN]);
+
 
   // Dragging
   const handleMouseDown = (e: React.MouseEvent) => {
