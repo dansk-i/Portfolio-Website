@@ -634,7 +634,7 @@ export default function SchematicMap() {
           <button
             onClick={() => setShowConstruction((p) => !p)}
             className={`relative w-12 h-6 rounded-full transition-colors ${
-              showConstruction ? "bg-green-500" : "bg-gray-600"
+              showConstruction ? "bg-yellow-500" : "bg-gray-600"
             }`}
           >
             <span
