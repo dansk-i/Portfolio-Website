@@ -380,7 +380,7 @@ export default function SchematicMap() {
     };
     window.addEventListener("wheel", handleWheel, { passive: false });
     return () => window.removeEventListener("wheel", handleWheel);
-  }, [offset]);
+  }, [offset, clampOffset]);
 
   // Dragging
   const handleMouseDown = (e: React.MouseEvent) => {
