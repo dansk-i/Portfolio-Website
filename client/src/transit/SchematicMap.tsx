@@ -7,14 +7,14 @@ import { streetcarLines } from "./data/streetcar-schematic-data";
 import {lakes} from "./data/lakes-schematic-data";
 import lakeUrl from "./assets/lakes.svg";
 import lakeUrl2 from "./assets/lakes2.svg";
-// import goBarrie from "./assets/GO_Barrie.svg";
-// import goKitchener from "./assets/GO_Kitchener.svg";
-// import goLakeshoreEast from "./assets/GO_Lakeshore_East.svg";
-// import goLakeshoreWest from "./assets/GO_Lakeshore_West.svg";
-// import goMilton from "./assets/GO_Milton.svg";
-// import goRichmondHill from "./assets/GO_Richmond_Hill.svg";
-// import goStouffville from "./assets/GO_Stouffville.svg";
-// import upExpress from "./assets/UP_Express.svg";
+import goBarrie from "./assets/GO_Barrie.svg";
+import goKitchener from "./assets/GO_Kitchener.svg";
+import goLakeshoreEast from "./assets/GO_Lakeshore_East.svg";
+import goLakeshoreWest from "./assets/GO_Lakeshore_West.svg";
+import goMilton from "./assets/GO_Milton.svg";
+import goRichmondHill from "./assets/GO_Richmond_Hill.svg";
+import goStouffville from "./assets/GO_Stouffville.svg";
+import upExpress from "./assets/UP_Express.svg";
 import { useCallback } from "react";
 
 // ---------------------------------------------------------------------------
@@ -78,19 +78,19 @@ function TTCLogo() {
 }
 
 const LINE_LOGOS: Record<string, React.ReactNode> = {
-    // GO lines (keyed by goLines[i].id)
-    // barrie: <img src={goBarrie} className="h-10 w-10" alt="Barrie Line" />,
-    // kitchener: <img src={goKitchener} className="h-10 w-10" alt="Kitchener Line" />,
-    // lakeShoreEast: <img src={goLakeshoreEast} className="h-10 w-10" alt="Lakeshore East Line" />,
-    // lakeShoreWest: <img src={goLakeshoreWest} className="h-10 w-10" alt="Lakeshore West Line" />,
-    // milton: <img src={goMilton} className="h-10 w-10" alt="Milton Line" />,
-    // richmondHill: <img src={goRichmondHill} className="h-10 w-10" alt="Richmond Hill Line" />,
-    // stouffville: <img src={goStouffville} className="h-10 w-10" alt="Stouffville Line" />,
-    // upExpress: <img src={upExpress} className="h-10 w-10" alt="UP Express" />,
+    //GO lines (keyed by goLines[i].id)
+    barrie: <img src={goBarrie} className="h-10 w-10" alt="Barrie Line" />,
+    kitchener: <img src={goKitchener} className="h-10 w-10" alt="Kitchener Line" />,
+    lakeShoreEast: <img src={goLakeshoreEast} className="h-10 w-10" alt="Lakeshore East Line" />,
+    lakeShoreWest: <img src={goLakeshoreWest} className="h-10 w-10" alt="Lakeshore West Line" />,
+    milton: <img src={goMilton} className="h-10 w-10" alt="Milton Line" />,
+    richmondHill: <img src={goRichmondHill} className="h-10 w-10" alt="Richmond Hill Line" />,
+    stouffville: <img src={goStouffville} className="h-10 w-10" alt="Stouffville Line" />,
+    upExpress: <img src={upExpress} className="h-10 w-10" alt="UP Express" />,
 
 
-    // // Special cases / branches that should share a logo:
-    // "lakeShoreWest-Hamilton": <img src={goLakeshoreWest} className="h-10 w-10" alt="Lakeshore West (Hamilton)" />,
+    // Special cases / branches that should share a logo:
+    "lakeShoreWest-Hamilton": <img src={goLakeshoreWest} className="h-10 w-10" alt="Lakeshore West (Hamilton)" />,
 
     // TTC subway (if you want to keep these)
     "Line 1": <TTCLogo />,
