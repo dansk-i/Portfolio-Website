@@ -6,7 +6,6 @@ import { ReactComponent as LinkedinLogo } from '../assets/linkedin.svg';
 import { ReactComponent as QuestionLogo } from '../assets/question.svg';
 import { ReactComponent as ProjectIcon } from '../assets/projects2.svg';
 import Clock from '../components/Clock';
-import dotsAni from '../assets/dots.gif';
 import codingAni from '../assets/coding.gif';
 
 

@@ -30,8 +30,6 @@ type PathPoint = {
 };
 
 
-
-type PopupKind = "line" | "station";
 type PopupPlacement = "left" | "right" | "top" | "bottom";
 
 type PopupState =
@@ -230,7 +228,7 @@ export default function SchematicMap() {
   const [lastPos, setLastPos] = useState<{ x: number; y: number } | null>(null);
 
   const [showConstruction, setShowConstruction] = useState(true);
-  const [showProposed, setShowProposed] = useState(true);
+ // const [showProposed, setShowProposed] = useState(true);
   const [showGO, setShowGO] = useState(true);
   const [showStreetcar, setShowStreetcar] = useState(true);
 
@@ -604,7 +602,7 @@ export default function SchematicMap() {
     ...(showGO ? goLines : []),
     ...subwayLines,
     ...(showConstruction ? constructionLines : []),
-    ...(showProposed ? proposedLines : []),
+    //...(showProposed ? proposedLines : []),
   ];
 
   return (
