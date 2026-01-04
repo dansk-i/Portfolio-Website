@@ -25,12 +25,13 @@ export default function Home() {
 };
 
   const facts = [
-    "I love shaders",
-    "3D graphics rock!",
-    "Can't wait for TIFF 2025!",
-    "Math is beautiful",
-    "C++ for life",
+    "Great transit doesn't happen by accident!",
+    "Can't wait for TIFF 2026!",
+    "I ♡ Tokyo's Inokashira Line",
+    "Java for life",
+    "My favorite series is JoJo's Bizarre Adventure!",
     "Keep calm and code on",
+    "Planing today builds tomorrow's Toronto",
   ];
 
   const handleMouseDown = () => {
@@ -127,7 +128,7 @@ export default function Home() {
         <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-7 max-sm:col-span-1 max-sm:row-span-1 max-sm:min-h-[250px] p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(1) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
           <h2 className='text-lg font-bold pb-2'>About Me</h2>
           <div className='flex flex-col gap-2 text-sm font-light'>
-            <p> Hi, I'm Daniel, a software engineer from Toronto, Canada.</p> <br />
+            <p> Hi, I'm Daniel, a computer science graduate from Toronto, Canada.</p> <br />
             <p> My primary tools of choice includes:</p>
             <ul className='list-disc list-inside pl-1'>
               <li> <b>Java</b></li>
@@ -140,7 +141,7 @@ export default function Home() {
               <li> <b>WebGPU</b></li>
             </ul>
             <br />
-            <p>Besides coding, I'm passionate about 3D modelling, animation, weightlifiting, and cinema.</p>
+            <p>Besides coding and transit, I'm passionate about 3D modelling, animation, weightlifiting, and cinema.</p>
           </div>
         </section>
 
