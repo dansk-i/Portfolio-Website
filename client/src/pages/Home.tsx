@@ -70,9 +70,9 @@ export default function Home() {
               <h2 className="text-sm font-light m-0 text-zinc-500">welcome</h2>
             </div>
             <div className='h-full font-light'>
-              <span>I'm <b className="font-bold">Daniel Sobalski</b>, a software developer with strong focus on graphics, optimization, and the user experience.</span> <br />
+              <span>I'm <b className="font-bold">Daniel Sobalski</b>, a software developer and aspiring urban planner with a focus on transit systems and infrastructure.</span> <br />
 
-              <span className='block mt-2'>Feel free to reach out, or to check some the projects I've been working on below.</span>
+              <span className='block mt-2'>Feel free to reach out, or to check the transit map project I've been working on below.</span>
             </div>
 
 
@@ -148,7 +148,7 @@ export default function Home() {
 
         {/* Email And Socials */}
         <section className={`bg-neutral-800 overflow-hidden border border-zinc-600 align-start flex-none h-full justify-start relative col-span-1 row-span-4 max-sm:col-span-1 max-sm:row-span-1 max-sm:min-h-[250px] p-6 rounded-lg ${colorClasses[bordColor].hover} hover:border-1 transition-all duration-700 ease-out transform ${visBlocks.includes(2) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
-          <h2 className='text-lg font-bold pb-5'>Let's start working together!</h2>
+          <h2 className='text-lg font-bold pb-5'>Let's start collaborating!</h2>
           <h2 className="italic text-zinc-500 pb-1">Contact Details</h2>
           <p className='italic text-sm pb-5'>daniel.sobalski2036@gmail.com <br />Canada</p>
 
@@ -202,7 +202,7 @@ export default function Home() {
             
             <h2 className='text-sm text-zinc-500'>Now?</h2>
           <div className='flex flex-col gap-2 p-1 pt-3 text-sm font-light'>
-            <h2>Currently finishing my studies and looking for oppurtunities to collaborate on impactful projects!</h2>
+            <h2>Currently preparing for graduate studies in urban planning and transit systems.</h2>
           </div>
           
         </section>
