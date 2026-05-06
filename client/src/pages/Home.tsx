@@ -25,13 +25,12 @@ export default function Home() {
 };
 
   const facts = [
-    "Great transit doesn't happen by accident!",
+    "Keep calm and code on",
     "Can't wait for TIFF 2026!",
+    "Great transit doesn't happen by accident!",
     "I ♡ Tokyo's Inokashira Line",
     "Java for life",
     "My favorite series is JoJo's Bizarre Adventure!",
-    "Keep calm and code on",
-    "Planing today builds tomorrow's Toronto",
   ];
 
   const handleMouseDown = () => {
@@ -71,7 +70,7 @@ export default function Home() {
               <h2 className="text-sm font-light m-0 text-zinc-500">welcome</h2>
             </div>
             <div className='h-full font-light'>
-              <span>I'm <b className="font-bold">Daniel Sobalski</b>, a software developer and aspiring urban planner with a focus on transit systems and infrastructure.</span> <br />
+              <span>I'm <b className="font-bold">Daniel Sobalski</b>,  an analyst and project coordinator with a background in software development.</span> <br />
 
               <span className='block mt-2'>Feel free to reach out, or to check the transit map project I've been working on below.</span>
             </div>
@@ -203,7 +202,7 @@ export default function Home() {
             
             <h2 className='text-sm text-zinc-500'>Now?</h2>
           <div className='flex flex-col gap-2 p-1 pt-3 text-sm font-light'>
-            <h2>Currently preparing for graduate studies in urban planning and transit systems.</h2>
+            <h2>Recently graduated and looking for opportunities to apply my skills in a dynamic environment.</h2>
           </div>
           
         </section>
